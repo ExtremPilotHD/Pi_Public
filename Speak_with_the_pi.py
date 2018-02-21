@@ -29,6 +29,7 @@ def loop():
         lcd.message( 'How can i help you?' )# display CPU temperature
         lcd.message( '[9] Options' )   # display the time		
 		key = keypad.getKey()       #obtain the state of keys
+		print "You Pressed Key : %c "%(key) 
         if(key != 9):     #if there is key pressed, print its key code.
             lcd.setCursor(0,0)  # set cursor position
 			lcd.message( '[1] Speak!' )# display CPU temperature
