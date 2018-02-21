@@ -15,6 +15,8 @@ rowsPins = [12,16,18,22]        #connect to the row pinouts of the keypad
 colsPins = [19,15,13,11]        #connect to the column pinouts of the keypad
 
 def loop():
+    keypad = Keypad.Keypad(keys,rowsPins,colsPins,ROWS,COLS)    #creat Keypad object
+    keypad.setDebounceTime(50)      #set the debounce time
     mcp.output(3,1)     # turn on LCD backlight
     lcd.begin(16,2)     # set number of LCD lines and columns
     while(True):         
