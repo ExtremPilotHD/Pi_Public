@@ -15,11 +15,11 @@ rowsPins = [12,16,18,22]        #connect to the row pinouts of the keypad
 colsPins = [19,15,13,11]        #connect to the column pinouts of the keypad
 
 def loop():
-    keypad = Keypad.Keypad(keys,rowsPins,colsPins,ROWS,COLS)    #creat Keypad object
-    keypad.setDebounceTime(50)      #set the debounce time
-    mcp.output(3,1)     # turn on LCD backlight
-    lcd.begin(16,2)     # set number of LCD lines and columns
-    i = 0
+	keypad = Keypad.Keypad(keys,rowsPins,colsPins,ROWS,COLS)    #creat Keypad object
+	keypad.setDebounceTime(50)      #set the debounce time
+	mcp.output(3,1)     # turn on LCD backlight
+	lcd.begin(16,2)     # set number of LCD lines and columns
+	i = 0
 	while(True):         
         #lcd.clear()
 		if(i = 100000)
@@ -34,7 +34,10 @@ def loop():
 			lcd.setCursor(0,0)  # set cursor position
 			lcd.message( 'How can i help you?' )# display CPU temperature
 			lcd.message( '[9] Options' )# display the time
-		i++
+		key = keypad.getKey()
+		if(key != keypad.NULL):     #if there is key pressed, print its key code.
+			print "You Pressed Key : %c "%(key) 
+		i = i + 1
 		
 		
 		
