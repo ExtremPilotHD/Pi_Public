@@ -1,22 +1,12 @@
 from PCF8574 import PCF8574_GPIO
 from Adafruit_LCD1602 import Adafruit_CharLCD
 import RPi.GPIO as GPIO
-import Keypad 
 
 from time import sleep
 
-ROWS = 4        # number of rows of the Keypad
-COLS = 4        #number of columns of the Keypad
-keys =  [   '1','2','3','A',    #key code
-            '4','5','6','B',
-            '7','8','9','C',
-            '*','0','#','D'     ]
-rowsPins = [12,16,18,22]        #connect to the row pinouts of the keypad
-colsPins = [19,15,13,11]        #connect to the column pinouts of the keypad
+
 
 def loop():
-	keypad = Keypad.Keypad(keys,rowsPins,colsPins,ROWS,COLS)    #creat Keypad object
-	keypad.setDebounceTime(50)      #set the debounce time
 	mcp.output(3,1)     # turn on LCD backlight
 	lcd.begin(16,2)     # set number of LCD lines and columns
 	i = 0
@@ -30,18 +20,13 @@ def loop():
 		if(i == 1000000):
 			lcd.clear()
 			lcd.setCursor(0,0)  # set cursor position
-			lcd.message( 'Status 1.1' )# display CPU temperature
+			lcd.message( 'Status 1.1\n' )# display CPU temperature
 			lcd.message( 'Status 1.2' )# display the time
 		if(i == 1500000):
 			lcd.clear()
 			lcd.setCursor(0,0)  # set cursor position
-			lcd.message( 'Status 2.1' )# display CPU temperature
+			lcd.message( 'Status 2.1\n' )# display CPU temperature
 			lcd.message( 'Status 2.2' )# display the time
-		key = keypad.getKey()
-		if(key == 9):     #if there is key pressed, print its key code.
-			lcd.clear()
-			lcd.setCursor(0,0)
-			lcd.message('Taste ' + key + ' pressed!')
 		i = i + 1
 		
 		
