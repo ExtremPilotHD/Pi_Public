@@ -17,13 +17,13 @@ def loop():
 			lcd.clear()
 			lcd.setCursor(0,0)  # set cursor position
 			lcd.message( 'Person erkannt!\n' )
-			lcd.message( 'My name is Pi!' )
+			lcd.message( '----------------' )
 			i = 0
 		else:
 			lcd.clear()
 			lcd.setCursor(0,0)  # set cursor position
 			lcd.message( 'Niemand erkannt!\n' )
-			lcd.message( 'My name is Pi!' )
+			lcd.message( '----------------' )
 			i = 0
 			
 		if GPIO.input(sensorPin)==GPIO.HIGH:
@@ -61,8 +61,9 @@ lcd = Adafruit_CharLCD(pin_rs=0, pin_e=2, pins_db=[4,5,6,7], GPIO=mcp)
 
 if __name__ == '__main__':
     print 'Program is starting ... '
-	GPIO.setmode(GPIO.BOARD)       # Numbers GPIOs by physical location
-	GPIO.setup(sensorPin, GPIO.IN)    # Set sensorPin's mode is input
+	sensorPin = 11
+    GPIO.setmode(GPIO.BOARD)       # Numbers GPIOs by physical location
+    GPIO.setup(sensorPin, GPIO.IN)    # Set sensorPin's mode is input
     try:
         loop()
     except KeyboardInterrupt:
