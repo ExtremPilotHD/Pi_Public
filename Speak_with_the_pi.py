@@ -36,7 +36,7 @@ def loop():
 			lcd.message( '[9] Options' )# display the time
 		key = keypad.getKey()
 		if(key != keypad.NULL):     #if there is key pressed, print its key code.
-			print "You Pressed Key : %c "%(key) 
+			lcd.message('Taste' + key + 'pressed!')
 		i = i + 1
 		
 		
