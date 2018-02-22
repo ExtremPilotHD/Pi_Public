@@ -22,23 +22,23 @@ def loop():
 	i = 0
 	while(True):         
         #lcd.clear()
-		if(i == 1000000):
+		if(i == 500000):
 			lcd.clear()
 			lcd.setCursor(0,0)  # set cursor position
 			lcd.message( 'Hallo\n' )# display CPU temperature
 			lcd.message( 'My name is Pi!' )   # display the time
+		if(i == 1000000):
+			lcd.clear()
+			lcd.setCursor(0,0)  # set cursor position
+			lcd.message( 'How can i help you?' )# display CPU temperature
+			lcd.message( '[9] Options' )# display the time
 		if(i == 1500000):
 			lcd.clear()
 			lcd.setCursor(0,0)  # set cursor position
 			lcd.message( 'How can i help you?' )# display CPU temperature
 			lcd.message( '[9] Options' )# display the time
-		if(i == 2000000):
-			lcd.clear()
-			lcd.setCursor(0,0)  # set cursor position
-			lcd.message( 'How can i help you?' )# display CPU temperature
-			lcd.message( '[9] Options' )# display the time
 		key = keypad.getKey()
-		if(key != keypad.NULL):     #if there is key pressed, print its key code.
+		if(key != 9):     #if there is key pressed, print its key code.
 			lcd.clear()
 			lcd.setCursor(0,0)
 			lcd.message('Taste ' + key + ' pressed!')
