@@ -19,18 +19,23 @@ def loop():
     keypad.setDebounceTime(50)      #set the debounce time
     mcp.output(3,1)     # turn on LCD backlight
     lcd.begin(16,2)     # set number of LCD lines and columns
-    while(True):         
+    i = 0
+	while(True):         
         #lcd.clear()
-        lcd.setCursor(0,0)  # set cursor position
-        lcd.message( 'Hallo\n' )# display CPU temperature
-        lcd.message( 'My name is Pi!' )   # display the time
-        sleep(5)
-        lcd.setCursor(0,0)  # set cursor position
-        lcd.message( 'How can i help you?' )# display CPU temperature
-        lcd.message( '[9] Options' )# display the time
-		key = keypad.getKey()       #obtain the state of keys
-		print "You Pressed Key : %c "%(key) 
+		if(i = 100000)
+			lcd.setCursor(0,0)  # set cursor position
+			lcd.message( 'Hallo\n' )# display CPU temperature
+			lcd.message( 'My name is Pi!' )   # display the time
+		if(i = 150000)
+			lcd.setCursor(0,0)  # set cursor position
+			lcd.message( 'How can i help you?' )# display CPU temperature
+			lcd.message( '[9] Options' )# display the time
+		if(i = 200000)
+			lcd.setCursor(0,0)  # set cursor position
+			lcd.message( 'How can i help you?' )# display CPU temperature
+			lcd.message( '[9] Options' )# display the time
 		
+        key = keypad.getKey()
         if(key != 9):     #if there is key pressed, print its key code.
             lcd.setCursor(0,0)  # set cursor position
 			lcd.message( '[1] Speak!' )# display CPU temperature
