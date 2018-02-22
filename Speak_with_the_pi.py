@@ -30,13 +30,13 @@ def loop():
 		if(i == 1000000):
 			lcd.clear()
 			lcd.setCursor(0,0)  # set cursor position
-			lcd.message( 'How can i help you?' )# display CPU temperature
-			lcd.message( '[9] Options' )# display the time
+			lcd.message( 'Status 1.1' )# display CPU temperature
+			lcd.message( 'Status 1.2' )# display the time
 		if(i == 1500000):
 			lcd.clear()
 			lcd.setCursor(0,0)  # set cursor position
-			lcd.message( 'How can i help you?' )# display CPU temperature
-			lcd.message( '[9] Options' )# display the time
+			lcd.message( 'Status 2.1' )# display CPU temperature
+			lcd.message( 'Status 2.2' )# display the time
 		key = keypad.getKey()
 		if(key != 9):     #if there is key pressed, print its key code.
 			lcd.clear()
