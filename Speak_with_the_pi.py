@@ -61,7 +61,7 @@ lcd = Adafruit_CharLCD(pin_rs=0, pin_e=2, pins_db=[4,5,6,7], GPIO=mcp)
 
 if __name__ == '__main__':
     print 'Program is starting ... '
-	sensorPin = 11
+    sensorPin = 11
     GPIO.setmode(GPIO.BOARD)       # Numbers GPIOs by physical location
     GPIO.setup(sensorPin, GPIO.IN)    # Set sensorPin's mode is input
     try:
