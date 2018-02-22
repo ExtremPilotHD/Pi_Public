@@ -25,7 +25,7 @@ def loop():
 			lcd.message( 'Niemand erkannt!\n' )
 			lcd.message( '----------------' )
 			i = 0
-		if (i = 100000)	
+		if (i = 1000):
 			if (GPIO.input(sensorPin)==GPIO.HIGH):
 				a = 1
 				i = 0
@@ -33,7 +33,7 @@ def loop():
 			else: 
 				a = 0
 				i = 0
-		i += 1
+		i = i + 1
 
 		
 		
