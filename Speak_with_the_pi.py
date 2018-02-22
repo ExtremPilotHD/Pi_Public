@@ -13,22 +13,22 @@ def loop():
 	a = 0
 	while(True):         
         #lcd.clear()
-		if(i == 10000 and a = 1):
+		if(i == 10000 and a == 1):
 			lcd.clear()
 			lcd.setCursor(0,0)  # set cursor position
 			lcd.message( 'Person erkannt!\n' )
 			lcd.message( 'My name is Pi!' )
 			i = 0
-		else
+		else:
 			lcd.clear()
 			lcd.setCursor(0,0)  # set cursor position
 			lcd.message( 'Niemand erkannt!\n' )
 			lcd.message( 'My name is Pi!' )
 			i = 0
 			
-		if GPIO.input(sensorPin)==GPIO.HIGH
+		if GPIO.input(sensorPin)==GPIO.HIGH:
 			i = 1
-		if GPIO.input(sensorPin)==GPIO.LOW
+		else: 
 			i = 0
 
 		i = i + 1
