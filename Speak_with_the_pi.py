@@ -18,13 +18,11 @@ def loop():
 			lcd.setCursor(0,0)  # set cursor position
 			lcd.message( 'Person erkannt!\n' )
 			lcd.message( '----------------' )
-			i = 0
 		else:
 			lcd.clear()
 			lcd.setCursor(0,0)  # set cursor position
 			lcd.message( 'Niemand erkannt!\n' )
 			lcd.message( '----------------' )
-			i = 0
 		if (i == 1000):
 			if (GPIO.input(sensorPin)==GPIO.HIGH):
 				a = 1
