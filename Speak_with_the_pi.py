@@ -13,7 +13,7 @@ def loop():
 	a = 0
 	while(True):         
         #lcd.clear()
-		if(i == 10000 and a == 1):
+		if(i == 10000) and (a == 1):
 			lcd.clear()
 			lcd.setCursor(0,0)  # set cursor position
 			lcd.message( 'Person erkannt!\n' )
