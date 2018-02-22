@@ -10,23 +10,27 @@ def loop():
 	mcp.output(3,1)     # turn on LCD backlight
 	lcd.begin(16,2)     # set number of LCD lines and columns
 	i = 0
+	a = 0
 	while(True):         
         #lcd.clear()
-		if(i == 500000):
+		if(i == 10000 and a = 1):
 			lcd.clear()
 			lcd.setCursor(0,0)  # set cursor position
-			lcd.message( 'Hallo\n' )# display CPU temperature
-			lcd.message( 'My name is Pi!' )   # display the time
-		if(i == 1000000):
+			lcd.message( 'Person erkannt!\n' )
+			lcd.message( 'My name is Pi!' )
+			i = 0
+		else
 			lcd.clear()
 			lcd.setCursor(0,0)  # set cursor position
-			lcd.message( 'Status 1.1\n' )# display CPU temperature
-			lcd.message( 'Status 1.2' )# display the time
-		if(i == 1500000):
-			lcd.clear()
-			lcd.setCursor(0,0)  # set cursor position
-			lcd.message( 'Status 2.1\n' )# display CPU temperature
-			lcd.message( 'Status 2.2' )# display the time
+			lcd.message( 'Niemand erkannt!\n' )
+			lcd.message( 'My name is Pi!' )
+			i = 0
+			
+		if GPIO.input(sensorPin)==GPIO.HIGH
+			i = 1
+		if GPIO.input(sensorPin)==GPIO.LOW
+			i = 0
+
 		i = i + 1
 		
 		
@@ -57,6 +61,8 @@ lcd = Adafruit_CharLCD(pin_rs=0, pin_e=2, pins_db=[4,5,6,7], GPIO=mcp)
 
 if __name__ == '__main__':
     print 'Program is starting ... '
+	GPIO.setmode(GPIO.BOARD)       # Numbers GPIOs by physical location
+	GPIO.setup(sensorPin, GPIO.IN)    # Set sensorPin's mode is input
     try:
         loop()
     except KeyboardInterrupt:
