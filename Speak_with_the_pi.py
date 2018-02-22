@@ -27,9 +27,9 @@ def loop():
 			i = 0
 			
 		if GPIO.input(sensorPin)==GPIO.HIGH:
-			i = 1
+			a = 1
 		else: 
-			i = 0
+			a = 0
 
 		i = i + 1
 		
