@@ -23,14 +23,17 @@ def loop():
 	while(True):         
         #lcd.clear()
 		if(i == 1000000):
+			lcd.clear()
 			lcd.setCursor(0,0)  # set cursor position
 			lcd.message( 'Hallo\n' )# display CPU temperature
 			lcd.message( 'My name is Pi!' )   # display the time
 		if(i == 1500000):
+			lcd.clear()
 			lcd.setCursor(0,0)  # set cursor position
 			lcd.message( 'How can i help you?' )# display CPU temperature
 			lcd.message( '[9] Options' )# display the time
 		if(i == 2000000):
+			lcd.clear()
 			lcd.setCursor(0,0)  # set cursor position
 			lcd.message( 'How can i help you?' )# display CPU temperature
 			lcd.message( '[9] Options' )# display the time
