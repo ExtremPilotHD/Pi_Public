@@ -34,7 +34,7 @@ def loop():
 			lcd.setCursor(0,0)  # set cursor position
 			lcd.message( 'How can i help you?' )# display CPU temperature
 			lcd.message( '[9] Options' )# display the time
-		
+		i++
 		
 		
 		
