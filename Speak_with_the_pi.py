@@ -38,7 +38,7 @@ def loop():
 		if(key != keypad.NULL):     #if there is key pressed, print its key code.
 			lcd.clear()
 			lcd.setCursor(0,0)
-			lcd.message('Taste' + key + 'pressed!')
+			lcd.message('Taste ' + key + ' pressed!')
 		i = i + 1
 		
 		
